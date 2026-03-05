@@ -10549,8 +10549,8 @@ Transform:
   m_GameObject: {fileID: 578867702}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.5, y: -2.03, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 6.17, y: -1.59, z: 0}
+  m_LocalScale: {x: 2.351341, y: 2.493593, z: 0.83677614}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -10703,7 +10703,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &632807501
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10924,7 +10924,7 @@ Transform:
   m_GameObject: {fileID: 841597699}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.79, y: -2.4618464, z: 0}
+  m_LocalPosition: {x: 13.34, y: -2.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10948,8 +10948,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 841597699}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+        m_MethodName: 
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11468,8 +11468,10 @@ GameObject:
   - component: {fileID: 1870074358}
   - component: {fileID: 1870074361}
   - component: {fileID: 1870074362}
-  - component: {fileID: 1870074363}
   - component: {fileID: 1870074364}
+  - component: {fileID: 1870074366}
+  - component: {fileID: 1870074365}
+  - component: {fileID: 1870074367}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -11572,7 +11574,7 @@ Transform:
   m_GameObject: {fileID: 1870074356}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.46, y: 1.4, z: 0}
+  m_LocalPosition: {x: -7.76, y: 1.4, z: 0}
   m_LocalScale: {x: 4.1, y: 3.41, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11628,18 +11630,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62485ccbf36559a43ac7b4c9329c51c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
---- !u!114 &1870074363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1870074356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dbe98d47eb04974b8cc194926b53b29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Checkpoint
 --- !u!95 &1870074364
 Animator:
   serializedVersion: 7
@@ -11662,6 +11652,75 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1870074365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870074356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 287dbe5a6be7a434e978a55f0c4873aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EventTrigger
+  targetTag: 2
+  trigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1870074366}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: OnCheckpoint
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1870074366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870074356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9e4d568aefbbb4b89ffed2571f2aa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player
+  playerpositiondata: {fileID: 11400000, guid: d2149ab46621b384c9b936476c1e153d, type: 2}
+--- !u!114 &1870074367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870074356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 287dbe5a6be7a434e978a55f0c4873aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EventTrigger
+  targetTag: 5
+  trigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1870074366}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: OnEnemy
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1992026908
 GameObject:
   m_ObjectHideFlags: 0
