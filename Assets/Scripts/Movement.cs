@@ -16,6 +16,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         groundcheck = GetComponentInChildren<GroundChecker>();
         animator = GetComponent<Animator>();
+        GameManager.instance.GameManagerCheck();
     }
 
     private void walkAnimation()

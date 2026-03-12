@@ -44,4 +44,10 @@ public class Player : MonoBehaviour
         transform.position = Position;
     }
 
+    public void OnFinish()
+    {
+        GameManager.instance.ChangeLevel(1);
+        GameManager.instance.ChangeLevel(0);
+    }
+
 }
