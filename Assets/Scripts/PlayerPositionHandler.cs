@@ -46,8 +46,8 @@ public class Player : MonoBehaviour
 
     public void OnFinish()
     {
-        GameManager.instance.ChangeLevel(1);
         GameManager.instance.ChangeLevel(0);
+        GameManager.instance.ChangeLevel(1);
     }
 
 }

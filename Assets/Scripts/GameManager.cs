@@ -94,5 +94,8 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
+    #region Panel Management Data
+    public bool isStart;
+    #endregion
 
 }
