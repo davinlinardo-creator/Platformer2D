@@ -10,7 +10,8 @@ public enum TypeTag
     Checkpoint,
     Finish,
     Trigger,
-    Enemy
+    Enemy,
+    Kill
 }
 public class EventTrigger : MonoBehaviour
 {

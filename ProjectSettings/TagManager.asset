@@ -8,6 +8,7 @@ TagManager:
   - ground
   - checkpoint
   - enemy
+  - Kill
   layers:
   - Default
   - TransparentFX

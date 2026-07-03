@@ -2,7 +2,6 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 using Unity.VisualScripting;
-using UnityEditor.Rendering;
 
 public class Player : MonoBehaviour
 {
@@ -33,6 +32,15 @@ public class Player : MonoBehaviour
     public void OnEnemy(GameObject col)
     {
         if (col.gameObject.tag == "Enemy")
+        {
+            Debug.Log("Player teleported to the last checkpoint.");
+            ResetPosition(CheckpointPosition);
+        }
+    }
+
+    public void OnDeath (GameObject col)
+    {
+        if (col.gameObject.tag == "Kill")
         {
             Debug.Log("Player teleported to the last checkpoint.");
             ResetPosition(CheckpointPosition);
